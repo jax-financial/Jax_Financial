@@ -56,11 +56,14 @@ nav ul li a {
 }
 .video {
   background-color: #eaa220;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 iframe {
-  width: 100%;
+  width: 50%;
   height: 50vh; /* 2/3 of the viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+.motto {
+  
 }
