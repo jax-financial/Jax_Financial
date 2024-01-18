@@ -17,6 +17,10 @@ header {
 
 .logo img {
   width: 100px; /* Adjust the size as needed */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
 }
 
 nav {
@@ -47,23 +51,42 @@ nav ul li a {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #333;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 6px 8px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 .video {
-  background-color: #eaa220;
+  margin: 0;
+  background-color: #b31b1b;
   justify-content: center;
   display: flex;
   align-items: center;
+  height: 50dvh;
+  width: 100%;
+  padding: 0;
 }
 iframe {
   width: 50%;
-  height: 50vh; /* 2/3 of the viewport height */
+  height: 100%;
 }
 .motto {
-  
+  margin: 0;
+  background-color: lightgray;
+  text-align: center;
 }
