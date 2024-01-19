@@ -9,7 +9,6 @@ body {
 
 header {
   background-color: white;
-  padding: 10px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -61,6 +60,7 @@ nav ul li a {
   text-decoration: none;
   display: block;
   border-bottom: 1px solid;
+  float: left;
 }
 .dropdown-content a:hover {
   background-color: #ddd;
@@ -93,10 +93,17 @@ iframe {
   text-align: center;
   padding: 1px;
 }
+.inner-container-header{
+    display: inline-block;
+    width: 50%;
+    background-color: white;
+    text-align: right;
+    transform: translate(50%, 0%);
+}
 footer {
     background-color: #b31b1b; /* Change this to the color you want */
     color: #fff; /* Change this to the text color you want */
     padding: 20px; /* Adjust the padding as needed */
     text-align: center; /* Align text to center if desired */
     line-height: 0.5em;
-  }
+}
