@@ -96,10 +96,10 @@ iframe {
 }
 .inner-container-header{
     display: flex;
-    width: 50%;
+    width: 75%;
     background-color: white;
     /*text-align: right;*/
-    transform: translate(50%, 0%);
+    transform: translate(25%, 0%);
     gap: 47%
 }
 .flex-col{
