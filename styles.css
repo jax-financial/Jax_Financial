@@ -16,7 +16,7 @@ header {
 }
 
 .logo img {
-  width: 100px; /* Adjust the size as needed */
+  width: 200px; /* Adjust the size as needed */
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -91,3 +91,10 @@ iframe {
   text-align: center;
   padding: 1px;
 }
+footer {
+    background-color: #b31b1b; /* Change this to the color you want */
+    color: #fff; /* Change this to the text color you want */
+    padding: 20px; /* Adjust the padding as needed */
+    text-align: center; /* Align text to center if desired */
+    line-height: 0.5em;
+  }
