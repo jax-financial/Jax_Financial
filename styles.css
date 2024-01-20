@@ -151,6 +151,15 @@ iframe {
   display:flex;
   flex-direction: column;
 }
+.location-contact-structure{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+}
+.images-maps{
+  display:flex;
+  gap: 5.5%;
+}
 footer {
     background-color: #b31b1b; /* Change this to the color you want */
     color: #fff; /* Change this to the text color you want */
