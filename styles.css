@@ -202,6 +202,23 @@ iframe {
   width:50%;
   text-align: center;
 }
+.video-learning-library-text{
+  display:flex;
+  flex-direction: column;
+}
+.video-column-structure{
+  display:flex;
+  flex-direction: column;
+  background-color: gray;
+  width: 96%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  transform: translate(2%, 0%);
+}
+.image-text-video-learning{
+  display:flex;
+  gap: 2%;
+}
 footer {
     background-color: #b31b1b; /* Change this to the color you want */
     color: #fff; /* Change this to the text color you want */
