@@ -160,6 +160,23 @@ iframe {
   display:flex;
   gap: 5.5%;
 }
+.strat-alliance-structure{
+  display:flex;
+  flex-direction: column;
+}
+.alliance-content{
+  border:1px solid black;
+  width: 98%;
+  transform: translate(1%, 0%);
+  margin-bottom: 1%
+}
+.image-data{
+  display:flex;
+}
+.alliance-text{
+  display:flex;
+  flex-direction: column;
+}
 footer {
     background-color: #b31b1b; /* Change this to the color you want */
     color: #fff; /* Change this to the text color you want */
