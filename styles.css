@@ -112,7 +112,7 @@ iframe {
   background-color: #b31b1b;
   justify-content: center;
   display: flex;
-  height: 70dvh;
+  /*height: 70dvh;*/
   width: 100%;
   padding: 0;
   gap: 1%;
@@ -129,7 +129,6 @@ iframe {
 .values-and-legacy{
   border:1px solid black;
   width: 90%;
-  height: 40%;
   transform: translate(5%, 0%);
 }
 .title-background{
@@ -140,6 +139,17 @@ iframe {
 }
 .values-and-legacy-data-flex{
   display:flex;
+}
+.member-template{
+  display:flex;
+}
+.member-data-template-flex{
+  display:flex;
+  gap: 1%;
+}
+.member-data{
+  display:flex;
+  flex-direction: column;
 }
 footer {
     background-color: #b31b1b; /* Change this to the color you want */
