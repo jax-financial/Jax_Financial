@@ -115,13 +115,15 @@ iframe {
   height: 70dvh;
   width: 100%;
   padding: 0;
+  gap: 1%;
 }
 .content-structure{
   margin-top: 1%;
   margin-bottom: 1%;
   display: flex;
-  width: 75%;
+  width: 45%;
   background-color: white;
+  border:1px solid black;
   /*text-align: right;*/
 }
 footer {
