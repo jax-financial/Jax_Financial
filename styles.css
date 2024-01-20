@@ -120,11 +120,26 @@ iframe {
 .content-structure{
   margin-top: 1%;
   margin-bottom: 1%;
-  display: flex;
   width: 45%;
   background-color: white;
   border:1px solid black;
+  text-align: left;
   /*text-align: right;*/
+}
+.values-and-legacy{
+  border:1px solid black;
+  width: 90%;
+  height: 40%;
+  transform: translate(5%, 0%);
+}
+.title-background{
+  background-color: gray;
+  transform: translate(5%, 0%);
+  text-align: center;
+  width: 90%;
+}
+.values-and-legacy-data-flex{
+  display:flex;
 }
 footer {
     background-color: #b31b1b; /* Change this to the color you want */
