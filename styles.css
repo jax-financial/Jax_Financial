@@ -107,6 +107,23 @@ iframe {
     flex-direction: column;
     text-align: right;
 }
+.data-template{
+  margin: 0;
+  background-color: #b31b1b;
+  justify-content: center;
+  display: flex;
+  height: 70dvh;
+  width: 100%;
+  padding: 0;
+}
+.content-structure{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: flex;
+  width: 75%;
+  background-color: white;
+  /*text-align: right;*/
+}
 footer {
     background-color: #b31b1b; /* Change this to the color you want */
     color: #fff; /* Change this to the text color you want */
