@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
 body {
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
+  font-family: "Playfair Display", serif;
   margin: 0;
   padding: 0;
   /* display: flex; */
@@ -46,10 +48,13 @@ nav ul li a {
   position: relative;
   width: 140px;
   text-align: center;
+  white-space: nowrap;
+  padding-bottom: 0.5%;
 }
 
 .dropdown-content {
   display: none;
+  margin-top: 5%;
   position: absolute;
   background-color: white;
   min-width: 140px;
@@ -89,13 +94,14 @@ nav ul li a {
   justify-content: center;
   display: flex;
   align-items: center;
-  height: 70dvh;
+  height: 60dvh;
   width: 100%;
-  padding: 0;
 }
 iframe {
   width: 65%;
   height: 100%;
+  padding: 10px;
+  border: none;
 }
 .motto {
   margin: 0;
