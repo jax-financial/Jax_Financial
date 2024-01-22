@@ -192,6 +192,7 @@ iframe {
   border: 1px solid silver;
   border-radius: 5px;
   width: 90%;
+  padding: 1%;
   transform: translate(5%, 0%);
 }
 .title-background {
@@ -237,6 +238,7 @@ iframe {
   width: 98%;
   transform: translate(1%, 0%);
   margin-bottom: 1%;
+  padding: 1%;
 }
 h2 {
   margin-top: 0px;
@@ -284,6 +286,7 @@ h4 {
   margin-top: 1%;
   margin-bottom: 1%;
   transform: translate(2%, 0%);
+  padding: 1%;
 }
 .image-text-video-learning {
   display: flex;
