@@ -235,8 +235,15 @@ iframe {
 .alliance-content {
   border: 1px solid silver;
   border-radius: 5px;
-  width: 98%;
+  width: 96%;
   transform: translate(1%, 0%);
+  margin-bottom: 1%;
+  padding: 1%;
+}
+.alliance-content-img {
+  border-radius: 5px;
+  width: 96%;
+  transform: translate(4.5%, 0%);
   margin-bottom: 1%;
   padding: 1%;
 }
