@@ -29,7 +29,7 @@
         }
     </script> -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        /*document.addEventListener('DOMContentLoaded', function () {
             // Function to show/hide card-blog based on selected option
             function showSelectedContent(selectedValue) {
                 var cardBlogs = document.querySelectorAll('.card-blog');
@@ -53,7 +53,35 @@
                     showSelectedContent(selectedValue);
                 });
             });
-        });
+        });*/
+        function showSelectedContentLeft() {
+                var dropdown = document.getElementById('left-dropdown')
+                var selectedValue = dropdown.options[dropdown.selectedIndex].value;
+                var cardBlogs = document.querySelectorAll('.card-blog');
+                cardBlogs.forEach(function (blog) {
+                    blog.style.display = 'none';
+                });
+
+                var selectedCardBlog = document.getElementById(selectedValue);
+                if (selectedCardBlog)
+                {
+                    selectedCardBlog.style.display = 'flex';
+                }
+            }
+        function showSelectedContentRight() {
+            var dropdown = document.getElementById('right-dropdown')
+            var selectedValue = dropdown.options[dropdown.selectedIndex].value;
+            var cardBlogs = document.querySelectorAll('.card-blog-translated');
+            cardBlogs.forEach(function (blog) {
+                blog.style.display = 'none';
+            });
+            selectedValue += "2"
+            var selectedCardBlog = document.getElementById(selectedValue);
+            if (selectedCardBlog)
+            {
+                selectedCardBlog.style.display = 'flex';
+            }
+        }
     </script>
 </head>
 
@@ -113,7 +141,7 @@
         <div class=data-template-blog>
             <div class=first-row-button-blog>
                 <p>Filter Content Based On:</p>
-                <select>
+                <select id = left-dropdown onchange = showSelectedContentLeft()>
                     <option Value="Life Insurance">Life Insurance</option>
                     <option Value="Estate Planning">Estate Planning</option>
                     <option Value="Asset Protection">Asset Protection</option>
@@ -135,7 +163,7 @@
                     <option Value="Tax Planning Strategies">Tax Planning Strategies</option>
                 </select>
                 <p>Filter Content Based On:</p>
-                <select>
+                <select id = right-dropdown onchange = showSelectedContentRight()>
                     <option Value="Life Insurance">Life Insurance</option>
                     <option Value="Estate Planning">Estate Planning</option>
                     <option Value="Asset Protection">Asset Protection</option>
@@ -333,7 +361,7 @@
                 </div>
 
                 <div class=content-structure>
-                    <div class=card-blog-translated id="Life Insurance">
+                    <div class=card-blog-translated id="Life Insurance2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -342,7 +370,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Estate Planning">
+                    <div class=card-blog-translated id="Estate Planning2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -351,7 +379,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Asset Protection">
+                    <div class=card-blog-translated id="Asset Protection2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -360,7 +388,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Business Valuation">
+                    <div class=card-blog-translated id="Business Valuation2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -369,7 +397,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Succession Planning">
+                    <div class=card-blog-translated id="Succession Planning2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -378,7 +406,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Business Planning">
+                    <div class=card-blog-translated id="Business Planning2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -387,7 +415,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Social Security">
+                    <div class=card-blog-translated id="Social Security2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -396,7 +424,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Retirement Planning">
+                    <div class=card-blog-translated id="Retirement Planning2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -405,7 +433,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Real Life Stories">
+                    <div class=card-blog-translated id="Real Life Stories2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -414,7 +442,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Animated Explainer Videos">
+                    <div class=card-blog-translated id="Animated Explainer Videos2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -423,7 +451,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Buy Sell Agreements">
+                    <div class=card-blog-translated id="Buy Sell Agreements2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -432,7 +460,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Income Tax Planning Strategies">
+                    <div class=card-blog-translated id="Income Tax Planning Strategies2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -441,7 +469,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Personal Development">
+                    <div class=card-blog-translated id="Personal Development2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -450,7 +478,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Lifetime of Hope">
+                    <div class=card-blog-translated id="Lifetime of Hope2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -459,7 +487,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Charitable Planning">
+                    <div class=card-blog-translated id="Charitable Planning2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -468,7 +496,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="About the Nautilus Group">
+                    <div class=card-blog-translated id="About the Nautilus Group2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -477,7 +505,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Insight Videos">
+                    <div class=card-blog-translated id="Insight Videos2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -486,7 +514,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Special Needs Planning">
+                    <div class=card-blog-translated id="Special Needs Planning2">
                         <p>Tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
@@ -495,7 +523,7 @@
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class=card-blog-translated id="Tax Planning Strategies">
+                    <div class=card-blog-translated id="Tax Planning Strategies2">
                         <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
                             Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
                             non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
