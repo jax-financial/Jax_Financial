@@ -1,25 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="jpeg logo" href="../images/logo.jpeg"/>
+    <link rel="icon" type="jpeg logo" href="../images/logo.jpeg" />
     <link rel="stylesheet" href="../styles.css">
     <title>Jax's Blog</title>
+
+    <!-- <script>
+        function toggleDropdown(element) {
+            // var dropdownContent = document.querySelector('.dropdown-expertise');
+            var dropdownContent = element.nextElementSibling;
+
+            var dropdownTitle = document.querySelector('.dropdown-title');
+
+            if (dropdownContent.style.display === "none" || dropdownContent.style.display === "")
+            {
+
+                dropdownContent.style.display = "block";
+                element.classList.add('helper');
+
+            } else
+            {
+                dropdownContent.style.display = "none";
+                element.classList.remove('helper');
+            }
+        }
+    </script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to show/hide card-blog based on selected option
+            function showSelectedContent(selectedValue) {
+                var cardBlogs = document.querySelectorAll('.card-blog');
+                cardBlogs.forEach(function (blog) {
+                    blog.style.display = 'none';
+                });
+
+                var selectedCardBlog = document.getElementById(selectedValue);
+                if (selectedCardBlog)
+                {
+                    selectedCardBlog.style.display = 'block';
+                }
+            }
+
+
+            // Event listener for dropdown change
+            var dropdowns = document.querySelectorAll('select');
+            dropdowns.forEach(function (dropdown) {
+                dropdown.addEventListener('change', function () {
+                    var selectedValue = this.value;
+                    showSelectedContent(selectedValue);
+                });
+            });
+        });
+    </script>
 </head>
+
 <body>
     <header>
-        <div class = "inner-container-header">
-            <div class = logo>
-            <a href = ../home.html><img class = logo src="../images/logo.jpeg" alt="Your Logo"></a>
+        <div class="inner-container-header">
+            <div class=logo>
+                <a href=../home.html><img class=logo src="../images/logo.jpeg" alt="Your Logo"></a>
             </div>
-            <div class = flex-col>
-                <p>4 Technology Drive, Ste 260 <br>East Setauket, NY 11733 <br> Phone: (631) 331-2964 <br> Fax: (631) 331-2928</p>
+            <div class=flex-col>
+                <p>4 Technology Drive, Ste 260 <br>East Setauket, NY 11733 <br> Phone: (631) 331-2964 <br> Fax: (631)
+                    331-2928</p>
             </div>
         </div>
         <nav>
             <ul>
-                <li class = "dropdown"><a href="../home.html">Home</a></li>
+                <li class="dropdown"><a href="../home.html">Home</a></li>
                 <li class="dropdown">
                     <a>Who Are We</a>
                     <div class="dropdown-content">
@@ -49,13 +100,14 @@
                         <a href="../Client_Education/video_learning_library.html">Video Learning Library</a>
                     </div>
                 </li>
-                <li class = "dropdown"><a href="../Location_And_Contact/location_and_contact.html">Location & Contact</a></li>
+                <li class="dropdown"><a href="../Location_And_Contact/location_and_contact.html">Location & Contact</a>
+                </li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class = data-template-blog>
-            <div class = first-row-button-blog>
+        <div class=data-template-blog>
+            <div class=first-row-button-blog>
                 <p>Filter Content Based On:</p>
                 <select>
                     <option Value="Life Insurance">Life Insurance</option>
@@ -101,281 +153,358 @@
                     <option Value="Tax Planning Strategies">Tax Planning Strategies</option>
                 </select>
             </div>
-            <div class = content-structure-blog>
-                <div class = content-structure>
-                    <div class = card-blog id = "Life Insurance">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+            <div class=content-structure-blog>
+                <div class=content-structure>
+                    <div class=card-blog id="Life Insurance">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Estate Planning">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Estate Planning">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Asset Protection">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Asset Protection">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Business Valuation">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Business Valuation">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Succession Planning">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Succession Planning">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Business Planning">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Business Planning">
+                        <p>Tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Social Security">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Social Security">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Retirement Planning">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Retirement Planning">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class = card-blog id = "Real Life Stories">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Real Life Stories">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Animated Explainer Videos">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Animated Explainer Videos">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Buy Sell Agreements">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Buy Sell Agreements">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <br>
-                    <div class = card-blog id = "Income Tax Planning Strategies">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Income Tax Planning Strategies">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Personal Development">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Personal Development">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Lifetime of Hope">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Lifetime of Hope">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Charitable Planning">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Charitable Planning">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "About the Nautilus Group">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="About the Nautilus Group">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Insight Videos">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Insight Videos">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Special Needs Planning">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Special Needs Planning">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Tax Planning Strategies">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog id="Tax Planning Strategies">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
                 </div>
-                <div class = content-structure>
-                    <div class = card-blog id = "Life Insurance">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                <div class=content-structure>
+                    <div class=card-blog-translated id="Life Insurance">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                        <p>Misc data | Misc Data</p>
+                        <img src="../images/team_pic.jpeg" alt="Your Logo">
+                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
+                    </div>
+                    <div class=card-blog-translated id="Estate Planning">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                        <p>Misc data | Misc Data</p>
+                        <img src="../images/team_pic.jpeg" alt="Your Logo">
+                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
+                    </div>
+                    <div class=card-blog-translated id="Asset Protection">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                        <p>Misc data | Misc Data</p>
+                        <img src="../images/team_pic.jpeg" alt="Your Logo">
+                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
+                    </div>
+                    <div class=card-blog-translated id="Business Valuation">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                        <p>Misc data | Misc Data</p>
+                        <img src="../images/team_pic.jpeg" alt="Your Logo">
+                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
+                    </div>
+                    <div class=card-blog-translated id="Succession Planning">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                        <p>Misc data | Misc Data</p>
+                        <img src="../images/team_pic.jpeg" alt="Your Logo">
+                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
+                    </div>
+                    <div class=card-blog-translated id="Business Planning">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                        <p>Misc data | Misc Data</p>
+                        <img src="../images/team_pic.jpeg" alt="Your Logo">
+                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
+                    </div>
+                    <div class=card-blog-translated id="Social Security">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                        <p>Misc data | Misc Data</p>
+                        <img src="../images/team_pic.jpeg" alt="Your Logo">
+                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
+                    </div>
+                    <div class=card-blog-translated id="Retirement Planning">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                        <p>Misc data | Misc Data</p>
+                        <img src="../images/team_pic.jpeg" alt="Your Logo">
+                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
+                    </div>
+                    <div class=card-blog-translated id="Real Life Stories">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
                     <br>
-                    <div class = card-blog id = "Estate Planning">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog-translated id="Animated Explainer Videos">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Asset Protection">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog-translated id="Buy Sell Agreements">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Business Valuation">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog-translated id="Income Tax Planning Strategies">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Succession Planning">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog-translated id="Personal Development">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Business Planning">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog-translated id="Lifetime of Hope">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Social Security">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog-translated id="Charitable Planning">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Retirement Planning">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog-translated id="About the Nautilus Group">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <div class = card-blog id = "Real Life Stories">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog-translated id="Insight Videos">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Animated Explainer Videos">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog-translated id="Special Needs Planning">
+                        <p>Tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <div class = card-blog id = "Buy Sell Agreements">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
+                    <div class=card-blog-translated id="Tax Planning Strategies">
+                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet.
+                            Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu
+                            non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar
+                            mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
                         <p>Misc data | Misc Data</p>
                         <img src="../images/team_pic.jpeg" alt="Your Logo">
                         <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
                     </div>
-                    <br>
-                    <br>
-                    <div class = card-blog id = "Income Tax Planning Strategies">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
-                        <p>Misc data | Misc Data</p>
-                        <img src="../images/team_pic.jpeg" alt="Your Logo">
-                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
-                    </div>
-                    <br>
-                    <div class = card-blog id = "Personal Development">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
-                        <p>Misc data | Misc Data</p>
-                        <img src="../images/team_pic.jpeg" alt="Your Logo">
-                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
-                    </div>
-                    <br>
-                    <div class = card-blog id = "Lifetime of Hope">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
-                        <p>Misc data | Misc Data</p>
-                        <img src="../images/team_pic.jpeg" alt="Your Logo">
-                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
-                    </div>
-                    <br>
-                    <div class = card-blog id = "Charitable Planning">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
-                        <p>Misc data | Misc Data</p>
-                        <img src="../images/team_pic.jpeg" alt="Your Logo">
-                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
-                    </div>
-                    <br>
-                    <div class = card-blog id = "About the Nautilus Group">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
-                        <p>Misc data | Misc Data</p>
-                        <img src="../images/team_pic.jpeg" alt="Your Logo">
-                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
-                    </div>
-                    <br>
-                    <div class = card-blog id = "Insight Videos">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
-                        <p>Misc data | Misc Data</p>
-                        <img src="../images/team_pic.jpeg" alt="Your Logo">
-                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
-                    </div>
-                    <br>
-                    <div class = card-blog id = "Special Needs Planning">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
-                        <p>Misc data | Misc Data</p>
-                        <img src="../images/team_pic.jpeg" alt="Your Logo">
-                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
-                    </div>
-                    <br>
-                    <div class = card-blog id = "Tax Planning Strategies">
-                        <p>Suscipit tellus mauris a diam maecenas. Morbi tempus iaculis urna id volutpat lacus laoreet. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. At urna condimentum mattis pellentesque id nibh tortor.</p>
-                        <p>Misc data | Misc Data</p>
-                        <img src="../images/team_pic.jpeg" alt="Your Logo">
-                        <a href="https://youtu.be/tgbNymZ7vqY" target="_blank">Watch to Learn More!</a>
-                    </div>
-                    <br>
                 </div>
             </div>
         </div>
         <div class="partners">
-            <div class = "logo">
+            <div class="logo">
                 <img src="../images/logo.jpeg" alt="Your Logo">
             </div>
         </div>
@@ -384,8 +513,10 @@
 <footer>
     <span><a href="mailto:hege@example.com">Disclosures </a> |</span>
     <span><a href="https://www.newyorklife.com/about/privacy-policy">Private Policy</a></span>
-    <p><a href="https://www.newyorklife.com/about/privacy-policy">Copyright 2023. New York Life Insurance Company. All Rights Reserved.</a></p>
+    <p><a href="https://www.newyorklife.com/about/privacy-policy">Copyright 2023. New York Life Insurance Company. All
+            Rights Reserved.</a></p>
     <p>NYLIFE Securities LLC, Member <a href="https://www.finra.org/#/">FINRA/SIPC</a></p>
     <p>For additional information, visit <a href="https://www.finra.org/#/">Customer Relationship Summary.pdf</a></p>
 </footer>
+
 </html>
