@@ -22,7 +22,10 @@ header {
   margin-right: auto;
   padding-bottom: 10px;
 }
-
+.icon img{
+  width: 30px;
+  padding-bottom: 5%;
+}
 nav {
   width: 100%;
 }
