@@ -58,28 +58,42 @@
                 var dropdown = document.getElementById('left-dropdown')
                 var selectedValue = dropdown.options[dropdown.selectedIndex].value;
                 var cardBlogs = document.querySelectorAll('.card-blog');
-                cardBlogs.forEach(function (blog) {
-                    blog.style.display = 'none';
-                });
+                if (selectedValue != "Display All Cards"){
+                    cardBlogs.forEach(function (blog) {
+                        blog.style.display = 'none';
+                    });
 
-                var selectedCardBlog = document.getElementById(selectedValue);
-                if (selectedCardBlog)
-                {
-                    selectedCardBlog.style.display = 'flex';
+                    var selectedCardBlog = document.getElementById(selectedValue);
+                    if (selectedCardBlog)
+                    {
+                        selectedCardBlog.style.display = 'flex';
+                    }
+                }
+                else{
+                    cardBlogs.forEach(function (blog) {
+                        blog.style.display = 'flex';
+                    });        
                 }
             }
         function showSelectedContentRight() {
             var dropdown = document.getElementById('right-dropdown')
             var selectedValue = dropdown.options[dropdown.selectedIndex].value;
             var cardBlogs = document.querySelectorAll('.card-blog-translated');
-            cardBlogs.forEach(function (blog) {
-                blog.style.display = 'none';
-            });
-            selectedValue += "2"
-            var selectedCardBlog = document.getElementById(selectedValue);
-            if (selectedCardBlog)
-            {
-                selectedCardBlog.style.display = 'flex';
+            if (selectedValue != "Display All Cards"){
+                cardBlogs.forEach(function (blog) {
+                    blog.style.display = 'none';
+                });
+                selectedValue += "2"
+                var selectedCardBlog = document.getElementById(selectedValue);
+                if (selectedCardBlog)
+                {
+                    selectedCardBlog.style.display = 'flex';
+                }
+            }
+            else{
+                cardBlogs.forEach(function (blog) {
+                        blog.style.display = 'flex';
+                    }); 
             }
         }
     </script>
@@ -142,6 +156,7 @@
             <div class=first-row-button-blog>
                 <p>Filter Content Based On:</p>
                 <select id = left-dropdown onchange = showSelectedContentLeft()>
+                    <option Value="Display All Cards">Display All Cards</option>
                     <option Value="Life Insurance">Life Insurance</option>
                     <option Value="Estate Planning">Estate Planning</option>
                     <option Value="Asset Protection">Asset Protection</option>
@@ -164,6 +179,7 @@
                 </select>
                 <p>Filter Content Based On:</p>
                 <select id = right-dropdown onchange = showSelectedContentRight()>
+                    <option Value="Display All Cards">Display All Cards</option>
                     <option Value="Life Insurance">Life Insurance</option>
                     <option Value="Estate Planning">Estate Planning</option>
                     <option Value="Asset Protection">Asset Protection</option>
