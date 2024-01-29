@@ -55,31 +55,34 @@
             });
         });*/
         function showSelectedContentLeft() {
-                var dropdown = document.getElementById('left-dropdown')
-                var selectedValue = dropdown.options[dropdown.selectedIndex].value;
-                var cardBlogs = document.querySelectorAll('.card-blog');
-                if (selectedValue != "Display All Cards"){
-                    cardBlogs.forEach(function (blog) {
-                        blog.style.display = 'none';
-                    });
+            var dropdown = document.getElementById('left-dropdown')
+            var selectedValue = dropdown.options[dropdown.selectedIndex].value;
+            var cardBlogs = document.querySelectorAll('.card-blog');
+            if (selectedValue != "Display All Cards")
+            {
+                cardBlogs.forEach(function (blog) {
+                    blog.style.display = 'none';
+                });
 
-                    var selectedCardBlog = document.getElementById(selectedValue);
-                    if (selectedCardBlog)
-                    {
-                        selectedCardBlog.style.display = 'flex';
-                    }
-                }
-                else{
-                    cardBlogs.forEach(function (blog) {
-                        blog.style.display = 'flex';
-                    });        
+                var selectedCardBlog = document.getElementById(selectedValue);
+                if (selectedCardBlog)
+                {
+                    selectedCardBlog.style.display = 'flex';
                 }
             }
+            else
+            {
+                cardBlogs.forEach(function (blog) {
+                    blog.style.display = 'flex';
+                });
+            }
+        }
         function showSelectedContentRight() {
             var dropdown = document.getElementById('right-dropdown')
             var selectedValue = dropdown.options[dropdown.selectedIndex].value;
             var cardBlogs = document.querySelectorAll('.card-blog-translated');
-            if (selectedValue != "Display All Cards"){
+            if (selectedValue != "Display All Cards")
+            {
                 cardBlogs.forEach(function (blog) {
                     blog.style.display = 'none';
                 });
@@ -90,10 +93,11 @@
                     selectedCardBlog.style.display = 'flex';
                 }
             }
-            else{
+            else
+            {
                 cardBlogs.forEach(function (blog) {
-                        blog.style.display = 'flex';
-                    }); 
+                    blog.style.display = 'flex';
+                });
             }
         }
     </script>
@@ -103,7 +107,7 @@
     <header>
         <div class="inner-container-header">
             <div class=logo>
-                <a href=../home.html><img class=logo src="../images/logo.jpeg" alt="Your Logo"></a>
+                <a href=../home.html><img class=logo src="../images/logo.png" alt="Your Logo"></a>
             </div>
             <div class=flex-col>
                 <p>4 Technology Drive, Ste 260 <br>East Setauket, NY 11733 <br> Phone: (631) 331-2964 <br> Fax: (631)
@@ -155,7 +159,7 @@
         <div class=data-template-blog>
             <div class=first-row-button-blog>
                 <p>Filter Content Based On:</p>
-                <select id = left-dropdown onchange = showSelectedContentLeft()>
+                <select id=left-dropdown onchange=showSelectedContentLeft()>
                     <option Value="Display All Cards">Display All Cards</option>
                     <option Value="Life Insurance">Life Insurance</option>
                     <option Value="Estate Planning">Estate Planning</option>
@@ -178,7 +182,7 @@
                     <option Value="Tax Planning Strategies">Tax Planning Strategies</option>
                 </select>
                 <p>Filter Content Based On:</p>
-                <select id = right-dropdown onchange = showSelectedContentRight()>
+                <select id=right-dropdown onchange=showSelectedContentRight()>
                     <option Value="Display All Cards">Display All Cards</option>
                     <option Value="Life Insurance">Life Insurance</option>
                     <option Value="Estate Planning">Estate Planning</option>

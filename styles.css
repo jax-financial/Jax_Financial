@@ -16,13 +16,13 @@ header {
 }
 
 .logo img {
-  width: 200px; /* Adjust the size as needed */
+  width: 150px; /* Adjust the size as needed */
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 10px;
 }
-.icon img{
+.icon img {
   width: 30px;
   padding-bottom: 5%;
 }
