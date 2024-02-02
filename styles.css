@@ -93,7 +93,10 @@ nav ul li a {
 
 .video {
   margin: 0;
-  background-color: #b31b1b;
+  background-image: url('images/rough_background.jpeg');
+  background-size: cover; /* Adjusts the size of the background image */
+  background-repeat: repeat; /* Specifies how the background image should repeat */
+  /*background-color: #b31b1b;*/
   justify-content: center;
   display: flex;
   align-items: center;
@@ -127,7 +130,11 @@ iframe {
 }
 .data-template {
   margin: 0;
-  background-color: #b31b1b;
+  background-image: url('images/rough_background.jpeg');
+  background-size: cover; /* Adjusts the size of the background image */
+  background-repeat: repeat; /* Specifies how the background image should repeat */
+  /*padding: 20px; /* Add padding to prevent content from touching the edges */
+  /*background-color: #b31b1b;*/
   justify-content: center;
   display: flex;
   /*height: 70dvh;*/
@@ -137,7 +144,11 @@ iframe {
 }
 .data-template-blog {
   margin: 0;
-  background-color: #b31b1b;
+  /*background-color: #b31b1b;*/
+  background-image: url('images/rough_background.jpeg');
+  background-size: cover; /* Adjusts the size of the background image */
+  background-repeat: repeat; /* Specifies how the background image should repeat */
+  /*padding: 20px; /* Add padding to prevent content from touching the edges */
   justify-content: center;
   flex-direction: column;
   display: flex;
