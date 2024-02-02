@@ -347,3 +347,9 @@ footer {
   line-height: 0.5em;
   font-size: 10px;
 }
+.team_pic_strategic img {
+  width: 100%; /* Adjust the size as needed */
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
