@@ -253,9 +253,6 @@ iframe {
   padding: 1%;
 }
 .alliance-content-img {
-  border-radius: 5px;
-  width: 96%;
-  transform: translate(4.5%, 0%);
   margin-bottom: 1%;
   padding: 1%;
 }
@@ -350,6 +347,4 @@ footer {
 .team_pic_strategic img {
   width: 100%; /* Adjust the size as needed */
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
 }
