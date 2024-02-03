@@ -230,6 +230,12 @@ iframe {
 }
 .values-and-legacy-data-flex {
   display: flex;
+  gap: 10%;
+}
+.values-and-legacy-data-flex-col {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3%;
 }
 .member-template {
   display: flex;
@@ -362,4 +368,7 @@ footer {
 .team_pic {
   width: 100%; /* Adjust the size as needed */
   display: flex;
+}
+li {
+  padding: 10px;
 }
