@@ -22,6 +22,11 @@ header {
   margin-right: auto;
   padding-bottom: 10px;
 }
+.logo-blog img {
+  width: 150px; /* Adjust the size as needed */
+  display: block;
+  padding-bottom: 10px;
+}
 .icon img {
   width: 30px;
   padding-bottom: 5%;
