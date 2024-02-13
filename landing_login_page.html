@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" type="jpeg logo" href="images/fwlogocreation/Logo-Jax-White Background.png" />
+    <title>Jax Financial Group</title>
+</head>
+<body>
+    <style>
+        body {
+          background-color: #b31b1b; /* Change this to your desired color */
+        }
+      </style>
+    <div class = "landing-login">
+        <div class=logo>
+            <a href=home.html><img class=logo src="images/logo.png" alt="Your Logo"></a>
+        </div>
+        <p>Client Login for Jax Financial Strategies:</p>
+        <form>
+            Username:  <input type="text" id = "username-input">
+            Password:  <input type="text" id = "password-input">
+        </form>
+        <br>
+        <button onclick = openPage() class = button type="button">Login</button>
+        <p id="login-failed"></p>
+        <script>
+            function openPage(){
+                const username_input = document.getElementById("username-input").value;
+                const password_input = document.getElementById("password-input").value;
+                if (username_input == "jax_financial" && password_input == "021224"){
+                    document.location.href = "home.html";                    
+                }
+                else{
+                    document.getElementById("login-failed").innerHTML = "Login Failed. Either your username or password is incorrect. Please try again!"
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

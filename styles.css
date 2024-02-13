@@ -374,6 +374,27 @@ footer {
   width: 100%; /* Adjust the size as needed */
   display: flex;
 }
+.landing-login{
+  background-color: #D3D3D3;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+}
+.button{
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.button:hover {
+  background-color: #b31b1b; /* Green */
+}
 li {
   padding: 10px;
 }
