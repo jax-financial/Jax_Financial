@@ -253,6 +253,9 @@ iframe {
   display: flex;
   flex-direction: column;
 }
+.mem-img{
+  width: 200px;
+}
 .location-contact-structure {
   display: flex;
   flex-direction: column;
